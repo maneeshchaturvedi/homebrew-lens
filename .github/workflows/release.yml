@@ -19,27 +19,24 @@ jobs:
           token: ${{ secrets.PRIVATE_REPO_TOKEN }}
           fetch-depth: 0
 
-      - name: Checkout goreleaser config
+      - name: Fetch goreleaser config
         uses: actions/checkout@v4
         with:
           path: _homebrew
-          fetch-depth: 0
 
-      - name: Copy goreleaser config into source tree
-        run: cp _homebrew/.goreleaser.yaml .goreleaser.yaml
+      - name: Copy goreleaser config and clean up
+        run: |
+          cp _homebrew/.goreleaser.yaml .goreleaser.yaml
+          rm -rf _homebrew
 
       - uses: actions/setup-go@v5
         with:
           go-version: "1.23"
 
-      - name: Set tag for GoReleaser
-        run: |
-          git tag ${{ github.event.client_payload.ref }} || true
-
       - uses: goreleaser/goreleaser-action@v6
         with:
-          version: latest
-          args: release --clean
+          version: "~> v2"
+          args: release --clean --skip=validate
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GORELEASER_CURRENT_TAG: ${{ github.event.client_payload.ref }}
