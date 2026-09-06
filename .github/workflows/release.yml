@@ -29,6 +29,15 @@ jobs:
           cp _homebrew/.goreleaser.yaml .goreleaser.yaml
           rm -rf _homebrew
 
+      - name: Debug workspace
+        run: |
+          echo "=== Working directory ==="
+          pwd
+          echo "=== Top-level files ==="
+          ls -la
+          echo "=== cmd/ ==="
+          ls -la cmd/ 2>/dev/null || echo "cmd/ not found"
+
       - uses: actions/setup-go@v5
         with:
           go-version: "1.23"
