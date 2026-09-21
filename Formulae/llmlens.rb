@@ -4,8 +4,6 @@ class Llmlens < Formula
   version "0.0.4"
   license "MIT"
 
-  depends_on "voktlabs/vokt/vokt"
-
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/maneeshchaturvedi/homebrew-lens/releases/download/v0.0.4/lens-darwin-arm64"
