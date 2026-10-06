@@ -7,20 +7,20 @@ class Llmlens < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/maneeshchaturvedi/homebrew-lens/releases/download/v0.0.50/lens-darwin-arm64"
-      sha256 "4466561ce215beac7f0498818e71b14437c141f549c75af9d68f512383fe0a8c"
+      sha256 "e4d1c497511e4a005d34ea364ae0d20309f3297adae2145f73f3c1844dcbd4a6"
     else
       url "https://github.com/maneeshchaturvedi/homebrew-lens/releases/download/v0.0.50/lens-darwin-amd64"
-      sha256 "c93f7e71d946e5a04d89d7ec8dd91f677618c2185683317c1cd731a00def4b40"
+      sha256 "c54f52e82ce19436d7016c59aba17512ceef608ac2f4f66c7597fba8f3d07f73"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/maneeshchaturvedi/homebrew-lens/releases/download/v0.0.50/lens-linux-arm64"
-      sha256 "97200f7484cfdb2531590a4a2fe47fb5c8ccbe864056a67fb094bb9c2d06f94b"
+      sha256 "70c23e34bb4ede1df68d76ce706053adb462e6d93559144a2bd51ff434303005"
     else
       url "https://github.com/maneeshchaturvedi/homebrew-lens/releases/download/v0.0.50/lens-linux-amd64"
-      sha256 "2cb7f37e78e0d15a94982fa5c6ab68c81a83ebaf4be8c9eb81371c605fd6177d"
+      sha256 "acaae15ef180d34213365e193342d88b2e6a08bd7451f13f058d99caf1e7dac6"
     end
   end
 
