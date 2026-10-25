@@ -1,26 +1,26 @@
 class Llmlens < Formula
   desc "Stream coding agent sessions to lens-ingest"
   homepage "https://github.com/maneeshchaturvedi/homebrew-lens"
-  version "0.0.58"
+  version "0.0.59"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/maneeshchaturvedi/homebrew-lens/releases/download/v0.0.58/lens-darwin-arm64"
-      sha256 "1aeb3913b8641476d1a468b3285d7a55dcd2947ec2ef8d6cf9b6ff1b1ab0ab01"
+      url "https://github.com/maneeshchaturvedi/homebrew-lens/releases/download/v0.0.59/lens-darwin-arm64"
+      sha256 "8e1d0dd3eff8cc8312a10bafdfe4fbe39c7a1e60db8c2c4be4e76456f2c7c375"
     else
-      url "https://github.com/maneeshchaturvedi/homebrew-lens/releases/download/v0.0.58/lens-darwin-amd64"
-      sha256 "b0ffe02de47cbbcf03343f29d17b1244851d9b28d321ea4da85437cd0af98bf8"
+      url "https://github.com/maneeshchaturvedi/homebrew-lens/releases/download/v0.0.59/lens-darwin-amd64"
+      sha256 "e49ab03fd692e77ef4cf2fbf9ce0bf6c060390b0de6db992ba930841c757df2e"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/maneeshchaturvedi/homebrew-lens/releases/download/v0.0.58/lens-linux-arm64"
-      sha256 "072cf572995354af534003867525d25595ff79815e821f80748a04a241c41471"
+      url "https://github.com/maneeshchaturvedi/homebrew-lens/releases/download/v0.0.59/lens-linux-arm64"
+      sha256 "d342bd44eaf5c0e2dbe3a8214147aaa8e2e8a607ecb53adeceac8feed15327bf"
     else
-      url "https://github.com/maneeshchaturvedi/homebrew-lens/releases/download/v0.0.58/lens-linux-amd64"
-      sha256 "5ac63921ebb7804c704d87846e32b7539c47c1a41277f20df2c9805b34d13dd4"
+      url "https://github.com/maneeshchaturvedi/homebrew-lens/releases/download/v0.0.59/lens-linux-amd64"
+      sha256 "21cf650c95e4c97c9f2fe3e14a29ba60f6d05f69adeb1d786f8144511d93fba1"
     end
   end
 
